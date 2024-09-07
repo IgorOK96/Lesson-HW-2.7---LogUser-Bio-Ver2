@@ -7,19 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A47CB332C8C699D002D83BB /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A47CB322C8C699D002D83BB /* FirstViewController.swift */; };
 		9AB661732C8B621200778BCE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB661722C8B621200778BCE /* AppDelegate.swift */; };
 		9AB661752C8B621200778BCE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB661742C8B621200778BCE /* SceneDelegate.swift */; };
-		9AB661772C8B621200778BCE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB661762C8B621200778BCE /* ViewController.swift */; };
+		9AB661772C8B621200778BCE /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB661762C8B621200778BCE /* MainViewController.swift */; };
 		9AB6617A2C8B621200778BCE /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 9AB661792C8B621200778BCE /* Base */; };
 		9AB6617C2C8B621300778BCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AB6617B2C8B621300778BCE /* Assets.xcassets */; };
 		9AB6617F2C8B621300778BCE /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 9AB6617E2C8B621300778BCE /* Base */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		9AB6616F2C8B621200778BCE /* Lesson HW 2.7 - LogUser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lesson HW 2.7 - LogUser.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A47CB322C8C699D002D83BB /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		9AB6616F2C8B621200778BCE /* Lesson HW 2.6 - LogUser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lesson HW 2.6 - LogUser.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AB661722C8B621200778BCE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9AB661742C8B621200778BCE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9AB661762C8B621200778BCE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9AB661762C8B621200778BCE /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		9AB661792C8B621200778BCE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9AB6617B2C8B621300778BCE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9AB6617E2C8B621300778BCE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -48,7 +50,7 @@
 		9AB661702C8B621200778BCE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9AB6616F2C8B621200778BCE /* Lesson HW 2.7 - LogUser.app */,
+				9AB6616F2C8B621200778BCE /* Lesson HW 2.6 - LogUser.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -58,7 +60,8 @@
 			children = (
 				9AB661722C8B621200778BCE /* AppDelegate.swift */,
 				9AB661742C8B621200778BCE /* SceneDelegate.swift */,
-				9AB661762C8B621200778BCE /* ViewController.swift */,
+				9AB661762C8B621200778BCE /* MainViewController.swift */,
+				9A47CB322C8C699D002D83BB /* FirstViewController.swift */,
 				9AB661782C8B621200778BCE /* Main.storyboard */,
 				9AB6617B2C8B621300778BCE /* Assets.xcassets */,
 				9AB6617D2C8B621300778BCE /* LaunchScreen.storyboard */,
@@ -70,9 +73,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9AB6616E2C8B621200778BCE /* Lesson HW 2.7 - LogUser */ = {
+		9AB6616E2C8B621200778BCE /* Lesson HW 2.6 - LogUser */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9AB661832C8B621300778BCE /* Build configuration list for PBXNativeTarget "Lesson HW 2.7 - LogUser" */;
+			buildConfigurationList = 9AB661832C8B621300778BCE /* Build configuration list for PBXNativeTarget "Lesson HW 2.6 - LogUser" */;
 			buildPhases = (
 				9AB6616B2C8B621200778BCE /* Sources */,
 				9AB6616C2C8B621200778BCE /* Frameworks */,
@@ -82,9 +85,9 @@
 			);
 			dependencies = (
 			);
-			name = "Lesson HW 2.7 - LogUser";
+			name = "Lesson HW 2.6 - LogUser";
 			productName = "Lesson HW 2.7 - LogUser";
-			productReference = 9AB6616F2C8B621200778BCE /* Lesson HW 2.7 - LogUser.app */;
+			productReference = 9AB6616F2C8B621200778BCE /* Lesson HW 2.6 - LogUser.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -102,7 +105,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 9AB6616A2C8B621200778BCE /* Build configuration list for PBXProject "Lesson HW 2.7 - LogUser" */;
+			buildConfigurationList = 9AB6616A2C8B621200778BCE /* Build configuration list for PBXProject "Lesson HW 2.6 - LogUser" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -115,7 +118,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9AB6616E2C8B621200778BCE /* Lesson HW 2.7 - LogUser */,
+				9AB6616E2C8B621200778BCE /* Lesson HW 2.6 - LogUser */,
 			);
 		};
 /* End PBXProject section */
@@ -138,9 +141,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9AB661772C8B621200778BCE /* ViewController.swift in Sources */,
+				9AB661772C8B621200778BCE /* MainViewController.swift in Sources */,
 				9AB661732C8B621200778BCE /* AppDelegate.swift in Sources */,
 				9AB661752C8B621200778BCE /* SceneDelegate.swift in Sources */,
+				9A47CB332C8C699D002D83BB /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,9 +310,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "IgorOK.Lesson-HW-2-7---LogUser";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -333,16 +341,20 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "IgorOK.Lesson-HW-2-7---LogUser";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9AB6616A2C8B621200778BCE /* Build configuration list for PBXProject "Lesson HW 2.7 - LogUser" */ = {
+		9AB6616A2C8B621200778BCE /* Build configuration list for PBXProject "Lesson HW 2.6 - LogUser" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9AB661812C8B621300778BCE /* Debug */,
@@ -351,7 +363,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9AB661832C8B621300778BCE /* Build configuration list for PBXNativeTarget "Lesson HW 2.7 - LogUser" */ = {
+		9AB661832C8B621300778BCE /* Build configuration list for PBXNativeTarget "Lesson HW 2.6 - LogUser" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9AB661842C8B621300778BCE /* Debug */,
