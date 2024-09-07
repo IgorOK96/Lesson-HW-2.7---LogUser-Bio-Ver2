@@ -11,7 +11,7 @@
         <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="Lesson_HW_2_7___LogUser" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="Lesson_HW_2_6___LogUser" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -98,7 +98,7 @@
         <!--First View Controller-->
         <scene sceneID="lwq-Fb-hfm">
             <objects>
-                <viewController id="kma-9w-xuV" customClass="FirstViewController" customModule="Lesson_HW_2_7___LogUser" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="kma-9w-xuV" customClass="FirstViewController" customModule="Lesson_HW_2_6___LogUser" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zyK-ea-1sS">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -129,6 +129,7 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="logOutButton:" destination="kma-9w-xuV" eventType="touchUpInside" id="9bu-vY-WxX"/>
+                                    <segue destination="ioe-Ay-K3R" kind="unwind" unwindAction="unwindToMainViewController:" id="VJa-qT-2LW"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -146,6 +147,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ns2-as-lxu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="ioe-Ay-K3R" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3433" y="-21"/>
         </scene>

@@ -58,6 +58,11 @@ final class MainViewController: UIViewController {
         present(alertPass, animated: true, completion: nil)
     }
     
+    @IBAction func unwindToMainViewController(_ segue: UIStoryboardSegue) {
+        nameTF.text = ""
+        passwordTF.text = ""
+    }
+    
     // MARK: - Private Methods
     private func showErrorAlert() {
         let alert = UIAlertController(

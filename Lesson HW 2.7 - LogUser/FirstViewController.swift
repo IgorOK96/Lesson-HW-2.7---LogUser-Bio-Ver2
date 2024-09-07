@@ -30,8 +30,8 @@ class FirstViewController: UIViewController {
         // Добавляем градиент на наш View
         view.layer.insertSublayer(gradientLayer, at: 0)
     }
-    // MARK: - IB Actions
-    @IBAction func logOutButton(_ sender: UIButton) {
-        dismiss(animated: true)
-    }
+//    // MARK: - IB Actions
+//    @IBAction func logOutButton(_ sender: UIButton) {
+//        dismiss(animated: true)
+//    }
 }
