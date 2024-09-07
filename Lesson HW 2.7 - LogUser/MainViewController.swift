@@ -17,14 +17,19 @@ final class MainViewController: UIViewController {
     var trueName = "Igor"
     var truePass = "Swift001"
     
-    // MARK: - Prepere data))
+    // MARK: - Prepere override
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let firstVC = segue.destination as? FirstViewController
         firstVC?.name = nameUser
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        self.view.endEditing(true)
+    }
+
     // MARK: - IB Actions
-    @IBAction func logButton(_ sender: UIButton) {
+        @IBAction func logButton(_ sender: UIButton) {
         nameUser = nameTF.text
         if nameTF.text == trueName && passwordTF.text == truePass {
             performSegue(withIdentifier: "logoutSegue", sender: self)
