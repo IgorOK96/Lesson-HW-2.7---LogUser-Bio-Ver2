@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Main View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="Lesson_HW_2_6___LogUser" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="Lesson_HW_2_6___LogUser" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -38,8 +38,7 @@
                                     <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle2"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="logButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uzu-kh-p0r"/>
-                                    <segue destination="ZPL-Kr-Ckc" kind="presentation" identifier="logoutSegue" modalPresentationStyle="fullScreen" id="DAp-d4-k1i"/>
+                                    <segue destination="ZPL-Kr-Ckc" kind="presentation" identifier="logoutSegue" modalPresentationStyle="fullScreen" id="JDv-CH-HNz"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="62" translatesAutoresizingMaskIntoConstraints="NO" id="iMO-ul-sue">
@@ -95,8 +94,8 @@
         <!--Home-->
         <scene sceneID="lwq-Fb-hfm">
             <objects>
-                <viewController id="kma-9w-xuV" customClass="FirstViewController" customModule="Lesson_HW_2_6___LogUser" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="zyK-ea-1sS">
+                <viewController id="kma-9w-xuV" customClass="WelcomeViewController" customModule="Lesson_HW_2_6___LogUser" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zyK-ea-1sS" customClass="UINavigationBar">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -153,12 +152,12 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ns2-as-lxu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="ioe-Ay-K3R" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3431" y="687"/>
+            <point key="canvasLocation" x="2829" y="687"/>
         </scene>
-        <!--Second View Controller-->
+        <!--User Info View Controller-->
         <scene sceneID="cko-81-Y5j">
             <objects>
-                <viewController id="Ns0-0a-jfw" customClass="SecondViewController" customModule="Lesson_HW_2_6___LogUser" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Ns0-0a-jfw" customClass="UserInfoViewController" customModule="Lesson_HW_2_6___LogUser" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lZr-HF-TXf">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -287,12 +286,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g81-JI-gG3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4998.75" y="686.61971830985919"/>
+            <point key="canvasLocation" x="4406" y="687"/>
         </scene>
-        <!--Third View Controller-->
+        <!--User Bio View Controller-->
         <scene sceneID="3Fq-LI-OvG">
             <objects>
-                <viewController id="ScS-yQ-Q9b" customClass="ThirdViewController" customModule="Lesson_HW_2_6___LogUser" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ScS-yQ-Q9b" customClass="UserBioViewController" customModule="Lesson_HW_2_6___LogUser" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2GA-0p-vZp">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -319,7 +318,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l2m-29-iig" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5809" y="687"/>
+            <point key="canvasLocation" x="5231" y="687"/>
         </scene>
         <!--Tab Bar Control-->
         <scene sceneID="dO7-Kj-gqf">
@@ -327,6 +326,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="ZPL-Kr-Ckc" customClass="TabBarControl" customModule="Lesson_HW_2_6___LogUser" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iJe-uN-LM5">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -337,7 +337,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ERx-zy-oZL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3429" y="-89"/>
+            <point key="canvasLocation" x="3345" y="-91"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="EdU-69-jen">
@@ -359,7 +359,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bSf-BC-aXK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4207.5" y="686.61971830985919"/>
+            <point key="canvasLocation" x="3600" y="687"/>
         </scene>
     </scenes>
     <resources>

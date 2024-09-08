@@ -5,6 +5,22 @@
 //  Created by user246073 on 9/8/24.
 //
 
+import Foundation
+
+struct User {
+    let id = UUID()
+    let login: String
+    let password: String
+    let person: UserInfo
+    
+    static func getUser() -> User {
+        User(
+            login: "Igor",
+            password: "Swift001",
+            person: UserInfo.getUserInfo()
+        )
+    }
+}
 struct UserInfo {
     let name: String
     let surname: String
@@ -12,6 +28,10 @@ struct UserInfo {
     let department: String
     let position: String
     let bioUser: String
+    
+    var fullNameUser: String {
+        "\(name) \(surname)"
+    }
     
     static func getUserInfo() -> UserInfo {
         UserInfo(

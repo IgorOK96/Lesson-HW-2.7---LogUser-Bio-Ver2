@@ -1,28 +1,31 @@
 //
-//  MainViewController.swift
+//  LoginViewController.swift
 //  Lesson HW 2.7 - LogUser
 //
 //  Created by user246073 on 9/6/24.
 //
-
 import UIKit
 
-final class MainViewController: UIViewController {
-    
+final class LoginViewController: UIViewController {
     // MARK: - IB Outlets
     @IBOutlet var nameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
         
-    private var trueName = "Igor"
-    private var truePass = "Swift001"
-    
+    private var user = User.getUser()
+
     // MARK: - Prepere override
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        nameTF.text = user.login
+        passwordTF.text = user.password
+        print("User ID:", user.id)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let tabBarController = segue.destination as? TabBarControl {
-            if let firstVC = tabBarController.viewControllers?.first as? FirstViewController {
-                firstVC.name = nameTF.text
-            }
+        guard let tabBarController = segue.destination as? TabBarControl else {
+            return
         }
+        tabBarController.user = user
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -30,19 +33,13 @@ final class MainViewController: UIViewController {
         self.view.endEditing(true)
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        nameTF.text = trueName
-        passwordTF.text = truePass
-    }
-
     // MARK: - IB Actions
-        @IBAction func logButton(_ sender: UIButton) {
-        if nameTF.text == trueName && passwordTF.text == truePass {
-            performSegue(withIdentifier: "logoutSegue", sender: self)
-        } else {
+    override func shouldPerformSegue(withIdentifier logoutSegue: String, sender: Any?) -> Bool {
+        guard nameTF.text == user.login && passwordTF.text == user.password  else {
             showErrorAlert()
+            return false
         }
+        return true
     }
     
     @IBAction func forgotUsername(_ sender: UIButton) {
@@ -84,3 +81,13 @@ final class MainViewController: UIViewController {
     }
 }
 
+extension UIView {
+    func applyGradient(colors: [CGColor], startPoint: CGPoint = CGPoint(x: 0, y: 0), endPoint: CGPoint = CGPoint(x: 1, y: 1)) {
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = self.bounds
+        gradientLayer.colors = colors
+        gradientLayer.startPoint = startPoint
+        gradientLayer.endPoint = endPoint
+        self.layer.insertSublayer(gradientLayer, at: 0)
+    }
+}
