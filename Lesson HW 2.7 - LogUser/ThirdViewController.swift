@@ -9,21 +9,32 @@ import UIKit
 
 class ThirdViewController: UIViewController {
 
+    @IBOutlet var infoLabelAboutUser: UILabel!
+    private let userInf = UserInfo.getUserInfo()
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        infoLabelAboutUser.numberOfLines = 0
+        infoLabelAboutUser.text = userInf.bioUser
+        
+        let backButton = UIBarButtonItem()
+        backButton.title = userInf.name + " " + userInf.surname
 
-        // Do any additional setup after loading the view.
+        self.navigationItem.backBarButtonItem = backButton
+        self.navigationController?.navigationBar.tintColor = UIColor.white
+
+        self.title = userInf.name + " " + userInf.surname + " Bio"
+
+        let gradientLayer = CAGradientLayer()
+        // Указываем размеры слоя равными размерам View
+        gradientLayer.frame = view.bounds
+        // Задаем цвета для градиента (например, от синего к фиолетовому)
+        gradientLayer.colors = [UIColor.blue.cgColor, UIColor.purple.cgColor]
+        // Опционально можно задать направления (по умолчанию сверху вниз)
+        gradientLayer.startPoint = CGPoint(x: 0, y: 0)
+        gradientLayer.endPoint = CGPoint(x: 1, y: 1)
+        // Добавляем градиент на наш View
+        view.layer.insertSublayer(gradientLayer, at: 0)
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

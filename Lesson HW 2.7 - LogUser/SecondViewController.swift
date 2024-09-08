@@ -8,22 +8,37 @@
 import UIKit
 
 class SecondViewController: UIViewController {
+    
+    @IBOutlet var positionInfLabel: UILabel!
+    @IBOutlet var departmentInfLabel: UILabel!
+    @IBOutlet var jobInfLabel: UILabel!
+    @IBOutlet var surnameInfLabel: UILabel!
+    @IBOutlet var nameInfLabel: UILabel!
+    
+    private let userInf = UserInfo.getUserInfo()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        nameInfLabel.text = userInf.name
+        surnameInfLabel.text = userInf.surname
+        jobInfLabel.text = userInf.job
+        departmentInfLabel.text = userInf.department
+        positionInfLabel.text = userInf.position
+        
+        self.title = userInf.name + " " + userInf.surname
+        
+        
+        let gradientLayer = CAGradientLayer()
+        // Указываем размеры слоя равными размерам View
+        gradientLayer.frame = view.bounds
+        // Задаем цвета для градиента (например, от синего к фиолетовому)
+        gradientLayer.colors = [UIColor.blue.cgColor, UIColor.purple.cgColor]
+        // Опционально можно задать направления (по умолчанию сверху вниз)
+        gradientLayer.startPoint = CGPoint(x: 0, y: 0)
+        gradientLayer.endPoint = CGPoint(x: 1, y: 1)
+        // Добавляем градиент на наш View
+        view.layer.insertSublayer(gradientLayer, at: 0)
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
+   

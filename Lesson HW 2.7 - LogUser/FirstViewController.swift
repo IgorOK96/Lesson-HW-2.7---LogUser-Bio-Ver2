@@ -11,13 +11,21 @@ class FirstViewController: UIViewController {
     
     // MARK: - IB Outlets
     @IBOutlet var welcomeUserLabel: UILabel!
+    @IBOutlet var fullName: UILabel!
     var name: String?
-    
+
+    private let userInf = UserInfo.getUserInfo()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if let tabBar = self.tabBarController?.tabBar.items?[1] {
+            tabBar.title = userInf.name + " " + userInf.surname
+        }
+        
+        fullName.text = (fullName.text!) + userInf.name + " " + userInf.surname
         if let testName = name {
-            welcomeUserLabel.text = (welcomeUserLabel.text ?? "") + (testName)
+            welcomeUserLabel.text = welcomeUserLabel.text! + testName
         }
         let gradientLayer = CAGradientLayer()
         // Указываем размеры слоя равными размерам View
@@ -30,8 +38,16 @@ class FirstViewController: UIViewController {
         // Добавляем градиент на наш View
         view.layer.insertSublayer(gradientLayer, at: 0)
     }
+}
+
+
+
+
+
+
+
 //    // MARK: - IB Actions
 //    @IBAction func logOutButton(_ sender: UIButton) {
 //        dismiss(animated: true)
 //    }
-}
+

@@ -12,7 +12,7 @@ final class MainViewController: UIViewController {
     // MARK: - IB Outlets
     @IBOutlet var nameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
-    
+        
     var nameUser: String?
     var trueName = "Igor"
     var truePass = "Swift001"
@@ -26,6 +26,12 @@ final class MainViewController: UIViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         self.view.endEditing(true)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        nameTF.text = trueName
+        passwordTF.text = truePass
     }
 
     // MARK: - IB Actions
@@ -72,7 +78,6 @@ final class MainViewController: UIViewController {
         )
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in
             self.nameTF.text = ""
-            self.passwordTF.text = ""
         }))
         self.present(alert, animated: true, completion: nil)
     }
