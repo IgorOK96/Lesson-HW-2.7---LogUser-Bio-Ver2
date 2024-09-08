@@ -51,5 +51,4 @@ struct UserInfo {
 """
         )
     }
-
 }
