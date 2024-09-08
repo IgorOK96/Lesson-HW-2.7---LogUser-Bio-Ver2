@@ -7,12 +7,12 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
+final class FirstViewController: UIViewController {
     
     // MARK: - IB Outlets
     @IBOutlet var welcomeUserLabel: UILabel!
     @IBOutlet var fullName: UILabel!
-    var name: String?
+    var name: String!
 
     private let userInf = UserInfo.getUserInfo()
 
@@ -22,11 +22,9 @@ class FirstViewController: UIViewController {
         if let tabBar = self.tabBarController?.tabBar.items?[1] {
             tabBar.title = userInf.name + " " + userInf.surname
         }
-        
+        welcomeUserLabel.text = "Welcome, \(name ?? "")!"
         fullName.text = (fullName.text!) + userInf.name + " " + userInf.surname
-        if let testName = name {
-            welcomeUserLabel.text = welcomeUserLabel.text! + testName
-        }
+        
         let gradientLayer = CAGradientLayer()
         // Указываем размеры слоя равными размерам View
         gradientLayer.frame = view.bounds

@@ -13,14 +13,16 @@ final class MainViewController: UIViewController {
     @IBOutlet var nameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
         
-    var nameUser: String?
-    var trueName = "Igor"
-    var truePass = "Swift001"
+    private var trueName = "Igor"
+    private var truePass = "Swift001"
     
     // MARK: - Prepere override
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let firstVC = segue.destination as? FirstViewController
-        firstVC?.name = truePass
+        if let tabBarController = segue.destination as? TabBarControl {
+            if let firstVC = tabBarController.viewControllers?.first as? FirstViewController {
+                firstVC.name = nameTF.text
+            }
+        }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -38,7 +40,6 @@ final class MainViewController: UIViewController {
         @IBAction func logButton(_ sender: UIButton) {
         if nameTF.text == trueName && passwordTF.text == truePass {
             performSegue(withIdentifier: "logoutSegue", sender: self)
-            nameUser = nameTF.text
         } else {
             showErrorAlert()
         }

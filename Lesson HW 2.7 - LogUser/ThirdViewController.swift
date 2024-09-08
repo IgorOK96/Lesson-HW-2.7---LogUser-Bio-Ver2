@@ -7,9 +7,10 @@
 
 import UIKit
 
-class ThirdViewController: UIViewController {
-
+final class ThirdViewController: UIViewController {
+    // MARK: - IB Outlets
     @IBOutlet var infoLabelAboutUser: UILabel!
+    
     private let userInf = UserInfo.getUserInfo()
 
     override func viewDidLoad() {

@@ -7,8 +7,8 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
-    
+final class SecondViewController: UIViewController {
+    // MARK: - IB Outlets
     @IBOutlet var positionInfLabel: UILabel!
     @IBOutlet var departmentInfLabel: UILabel!
     @IBOutlet var jobInfLabel: UILabel!
@@ -27,7 +27,6 @@ class SecondViewController: UIViewController {
         positionInfLabel.text = userInf.position
         
         self.title = userInf.name + " " + userInf.surname
-        
         
         let gradientLayer = CAGradientLayer()
         // Указываем размеры слоя равными размерам View
