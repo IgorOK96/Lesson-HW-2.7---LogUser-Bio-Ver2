@@ -30,8 +30,8 @@ final class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        nameTF.text = trueName
-        passwordTF.text = truePass
+//        nameTF.text = trueName
+//        passwordTF.text = truePass
     }
 
     // MARK: - IB Actions
