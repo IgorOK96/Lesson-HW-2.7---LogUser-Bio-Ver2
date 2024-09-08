@@ -20,7 +20,7 @@ final class MainViewController: UIViewController {
     // MARK: - Prepere override
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let firstVC = segue.destination as? FirstViewController
-        firstVC?.name = nameUser
+        firstVC?.name = truePass
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -30,15 +30,15 @@ final class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        nameTF.text = trueName
-//        passwordTF.text = truePass
+        nameTF.text = trueName
+        passwordTF.text = truePass
     }
 
     // MARK: - IB Actions
         @IBAction func logButton(_ sender: UIButton) {
-        nameUser = nameTF.text
         if nameTF.text == trueName && passwordTF.text == truePass {
             performSegue(withIdentifier: "logoutSegue", sender: self)
+            nameUser = nameTF.text
         } else {
             showErrorAlert()
         }
